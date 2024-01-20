@@ -1,73 +1,59 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
-
+const userSchema = new mongoose.Schema(
+  {
     username: {
-        type: String,
-        required: true,
-        unique: true,
-        minlength: 3,
-        maxlength: 20
+      type: String,
+      required: true,
+      unique: true,
+      min: 3,
+      max: 20,
     },
     email: {
-        type: String,
-        required: true,
-        unique: true,
-        minlength: 8,
-        maxlength: 50
+      type: String,
+      required: true,
+      unique: true,
+      max: 50,
     },
     password: {
-        type: String,
-        required: true,
-        minlength: 6,
-        maxlength: 20
+      type: String,
     },
     img: {
-        type: String,
+      type: String,
     },
     isAdmin: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false,
     },
-
-    }, 
-    { timestamps: true }
+  },
+  { timestamps: true }
 );
 
-const postSchema = new mongoose.Schema({
-
+const postSchema = new mongoose.Schema(
+  {
     title: {
-        type: String,
-        required: true,
-        unique: true,
-        minlength: 3,
-        maxlength: 40
+      type: String,
+      required: true,
     },
     desc: {
-        type: String,
-        required: true,
-        minlength: 8,
-        maxlength: 500
+      type: String,
+      required: true,
     },
     img: {
-        type: String,
+      type: String,
     },
     userId: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     slug: {
-        type: String,
-        required: true,
-        unique: true,
+      type: String,
+      required: true,
+      unique: true,
     },
-},
-    
-        { timestamps: true }
-
-   
+  },
+  { timestamps: true }
 );
 
-
-export const User = mongoose.models.User || mongoose.model("User", userSchema);
-export const Post = mongoose.models.Post || mongoose.model("Post", postSchema);
+export const User = mongoose.models?.User || mongoose.model("User", userSchema);
+export const Post = mongoose.models?.Post || mongoose.model("Post", postSchema);
