@@ -14,7 +14,12 @@
     <a href="https://github.com/shawndreifuss/next.js-blog"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="">Demo</a>
+
+
+![Demo](/src/app/blog.gif)
+
+   
   </p>
 </div>
 
@@ -47,11 +52,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-![Screenshot](/public/images/blog-next.png)
-
-
-
  This repo contains a modern blog platform that leverages GitHub for authentication, ensuring a secure and streamlined login process for both regular users and administrators. It employs JWT (JSON Web Tokens) for managing sessions, enhancing security and user experience by allowing stateless authentication. The admin dashboard feature provides comprehensive control over the application, enabling administrators to manage content, users, and settings efficiently. Built with Next.js beta css html and javascript,this app benefits from the latest advancements in React-based frameworks, offering improved performance and developer experience
 
 

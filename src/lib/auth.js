@@ -56,14 +56,15 @@ export const {
         connectToDb();
         try {
           const user = await User.findOne({ email: profile.email });
-console.log("user", user);
+console.log(profile.site_admin);
           if (!user) {
             const newUser = new User({
               username: profile.login,
               email: profile.email,
               image: profile.avatar_url,
-              isAdmin: false,
+              isAdmin: profile.site_admin,
             });
+            console.log("newUser", newUser);  
 
             await newUser.save();
           }
