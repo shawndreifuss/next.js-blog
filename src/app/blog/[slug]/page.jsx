@@ -19,10 +19,13 @@ export const generateMetadata = async ({ params }) => {
   const { slug } = params;
 
   const post = await getPost(slug);
+  
 
   return {
-    title: post.title,
-    description: post.desc,
+    "hello": "world",
+
+    // title: post.title,
+    // description: post.desc,
   };
 };
 
@@ -31,7 +34,7 @@ const SinglePostPage = async ({ params }) => {
 
   // FETCH DATA WITH AN API
   const post = await getData(slug);
-
+console.log(post);
   // FETCH DATA WITHOUT AN API
   // const post = await getPost(slug);
 
@@ -39,7 +42,7 @@ const SinglePostPage = async ({ params }) => {
     <div className={styles.container}>
       {post.img && (
         <div className={styles.imgContainer}>
-          <Image src={post.img} alt="" fill className={styles.img} />
+          <Image  src={post.img} alt="" fill className={styles.img} />
         </div>
       )}
       <div className={styles.textContainer}>

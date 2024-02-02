@@ -8,9 +8,9 @@ export const authConfig = {
       if (user) {
         token.id = user.id;
         token.isAdmin = user._doc.isAdmin;
-        console.log(user.isAdmin)
+       
       } 
-      console.log(token)
+      
       return token;
       
     },
