@@ -151,10 +151,9 @@ if ( !username || !password ) {
     
     await signIn("credentials", {
       username,
-      password,
-      
+      password
     });
-    return { success: true };
+    return { success: true }
   } catch (err) {
     console.log(err);
 
